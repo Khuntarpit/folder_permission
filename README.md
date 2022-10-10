@@ -1,15 +1,20 @@
 # folder_permission
 
-A new Flutter project.
+folder permission package is mainly developed to give specific permission in flutter.
 
-## Getting Started
+## usage :
+```bash
+  final _folderPermission = FolderPermission();
+```
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+this is for get permission of any folder for Android 11
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+  var data = await _folderPermission.getFolderPermission(arguments: {"FolderPath" : FolderPermission.WHATSAPP});
+```
 
+this is for get data from any folder and it returns the List of uri paths.
+
+```bash
+var data = await _folderPermission.getFolderData(arguments: {"FolderPath" : FolderPermission.WHATSAPP});
+```
